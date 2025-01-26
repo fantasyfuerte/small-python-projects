@@ -1,17 +1,17 @@
-nombre_del_archivo= input("Nombre del archivo:  ") + ".txt"
-contenido = input("\nAhora escribe el contenido:\n\n\n")
+fileName= input("File name (without extension):\n")
+content = input("\nContent:\n\n\n")
 
-append = input("\n\n\nSi el archivo ya existe quieres sobreescribirlo o añadir la informacion??\n1-Sobreescribirlo\n2-Añadir la información al final\n(Por defecto se agregará la informacion nueva al final)\n\n\n")
+append = input("\n\n\nWant to append or overwrite the file?\n1-Append\n2-Overwrite\n3-Cancel\n")
 
 if ((append == "1" )| (append == "sobreescribirlo") | (append == "sobrescribirlo")):
-    with open(nombre_del_archivo,"w",encoding="utf-8") as file:
-        file.write(contenido)
+    with open(fileName,"w",encoding="utf-8") as file:
+        file.write(content)
     
 else:
-    with open(nombre_del_archivo,"a",encoding="utf-8") as file:
-        file.write(contenido)
+    with open(fileName,"a",encoding="utf-8") as file:
+        file.write(content)
         
-finish = input("\nSe ha terminado la operación correctamente\n")
+finish = input("\nProcess finished successfully.\n")
     
 
 
