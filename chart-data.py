@@ -20,8 +20,8 @@ while True:
         des = input("1-Bars chart\n2-Poligonal Chart\n")
         break
     else:
-        xvalues = input("Listame los valores de la columna de las X separados por una coma (,). El primero debe ser el nombre.\n")
-        yvalues = input("Listame los valores de la columna de las Y separados por una coma (,). El primero debe ser el nombre.\n")
+        xvalues = input("List the values of column X separated by a comma (,). The first one should be the column name.\n")
+        yvalues = input("List the values of column Y separated by a comma (,). The first one should be the column name.\n")
         xvalues = xvalues.split(",")
         yvalues = yvalues.split(",")
         for i in range(1,len(yvalues)):
@@ -30,7 +30,7 @@ while True:
         
         df = pd.DataFrame({xvalues[0]:xvalues[1:], yvalues[0]:yvalues[1:]})
         print(f"\n\n{df}\n\n")
-        des = input("1-Grafico de Barras\n2-Grafico Poligonal\n")
+        des = input("1-Bars chart\n2-Poligonal Chart\n")
         break
 
 if des == "1":
